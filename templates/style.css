@@ -1,0 +1,13 @@
+/* <script>
+$(document).ready(function () {
+  $(
+    ".my-profile, .my-message, .other-profile, .other-message, span"
+  ).hide();
+
+  $(".btn").click(function () {
+    $(
+      ".my-profile, .my-message,.other-profile, .other-message, span"
+    ).show();
+  });
+});
+</script> */

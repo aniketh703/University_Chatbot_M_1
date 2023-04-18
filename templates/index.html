@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Bootstrap demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      ul,
+      li,
+      button {
+        padding: 0;
+        margin: 0;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      html,
+      body,
+      .flexbox {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        color: #2f2f2f;
+        font-family: Raleway, sans-serif;
+        font-size: 16px;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+      }
+      a:hover {
+        color: #8cfbde;
+      }
+      header {
+        position: relative;
+        padding: 0 2rem;
+      }
+      .navbar {
+        width: 100%;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .navbar .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .navbar .links {
+        display: flex;
+        gap: 2rem;
+      }
+      .navbar .toggle_btn {
+        color: #2f2f2f;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+      }
+      .action_btn {
+        background-color: #253237;
+        color: whitesmoke;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: scale 0.2 ease;
+      }
+      .action_btn :hover {
+        scale: 1.05;
+        color: #2f2f2f;
+      }
+      .action_btn:active {
+        scale: 0.95;
+      }
+      .dropdown_menu {
+        display: none;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        height: 0;
+        width: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .dropdown_menu.open {
+        height: 240px;
+      }
+      .dropdown_menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dropdown_menu .action_btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: 750px) {
+        .navbar .links,
+        .navbar .action_btn {
+          display: none;
+        }
+
+        .navbar .toggle_btn {
+          display: block;
+        }
+        .dropdown_menu {
+          display: block;
+        }
+      }
+      @media (max-width: 576px) {
+        .dropdown_menu {
+          left: 2rem;
+          width: unset;
+        }
+      }
+
+      .flexbox {
+        /* background-image: linear-gradient(to right, pink, gray); */
+        /* background-color: rgb(125, 216, 255); */
+        background: url(https://images.unsplash.com/photo-1679674704818-f3a500c1305b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+          no-repeat;
+          height:823.5px;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 13px;
+        backdrop-filter: blur(7px);
+        border: 2px solid rgba(red, green, blue, 0.2);
+      }
+      .chat-box {
+        /* background-color: #fff; */
+        width: 100%;
+        height: 65%;
+        max-height: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 8px;
+        margin: 20px;
+        border-radius: 13px;
+        backdrop-filter: blur(7px);
+        border: 2px solid rgba(red, green, blue, 0.2);
+      }
+      .chat-box > .chat-box-header {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 15px;
+        border-bottom: 1px solid #cfcfcf;
+      }
+      .chat-box > .chat-box-body {
+        height: 100%;
+        display: flex;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .chat-box > .chat-box-body #chat_messages {
+        width: 100%;
+        padding: 20px 15px;
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .chat-box > .chat-box-body #chat_messages .message {
+        /* width: 80%; */
+        padding: 20px 15px;
+        margin: 2px 0px;
+        overflow: hidden;
+        border-radius: 13px;
+        transition: height 0.3s ease-in-out 0s;
+      }
+      .chat-box > .chat-box-body #chat_messages .message.hide {
+        height: 0;
+      }
+      .chat-box > .chat-box-body #chat_messages .my-message {
+        color: #fff;
+        background-color: #253237;
+        align-self: flex-end;
+      }
+      .chat-box > .chat-box-body #chat_messages .other-message {
+        background-color: #e2e2e2;
+        width: 80%;
+      }
+      .chat-box > .chat-box-body #chat_messages .profile {
+        margin: 2px 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+      }
+      .chat-box > .chat-box-body #chat_messages .profile.hide {
+        height: 0;
+      }
+      .chat-box > .chat-box-body #chat_messages .profile img {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        border-radius: 50%;
+      }
+      .chat-box > .chat-box-header .profile img {
+        /* display: flex; */
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .chat-box > .chat-box-header .profile {
+        display: flex;
+        align-items: center;
+      }
+
+      .chat-box > .chat-box-body #chat_messages .my-profile {
+        color: #afafaf;
+        align-self: flex-end;
+      }
+      .chat-box > .chat-box-body #chat_messages .other-profile {
+        color: #afafaf;
+      }
+      .chat-box > .chat-box-footer {
+        width: 100%;
+        padding: 20px 15px;
+        border-top: solid 1px #cfcfcf;
+        box-sizing: border-box;
+        display: flex;
+      }
+      .chat-box > .chat-box-footer > #chat_input {
+        color: #2f2f2f;
+        font-family: Raleway, sans-serif;
+        font-size: 16px;
+        background-color: #d2d2d2;
+        width: 100%;
+        height: 40px;
+        max-height: 120px;
+        border: none;
+        padding: 10px 15px;
+        resize: none;
+        box-sizing: border-box;
+        border-radius: 13px;
+        transition: 0.3s background-color;
+      }
+      .chat-box > .chat-box-footer > #chat_input:focus {
+        background-color: #efefef;
+      }
+      .chat-box > .chat-box-footer > #send {
+        background: none;
+        border: none;
+        margin-left: 10px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      @media (min-width: 480px) {
+        .chat-box {
+          width: 480px;
+        }
+      }
+      button::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+
+      button {
+        outline: none;
+      }
+
+      h3 > small {
+        color: #afafaf;
+        font-weight: normal;
+      }
+    </style>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="{{ url_for('home') }}">Kanchi University</a>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="{{ url_for('home') }}"
+              ><i class="fa-solid fa-house"></i
+            ></a>
+          </li>
+          <li>
+            <a href="{{ url_for('contact') }}"
+              ><i class="fa-solid fa-phone"></i
+            ></a>
+          </li>
+          <li>
+            <a href="{{ url_for('about') }}"
+              ><i class="fa-solid fa-question"></i
+            ></a>
+          </li>
+          <li>
+            <a href="{{ url_for('services') }}"
+              ><i class="fa-sharp fa-solid fa-bolt"></i
+            ></a>
+          </li>
+        </ul>
+        <a href="{{ url_for('bot') }}" class="action_btn">Chatbot</a>
+        <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+      </div>
+      <div class="dropdown_menu">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('bot') }}" class="action_btn">Chatbot</a></li>
+      </div>
+    </header>
+    <div class="flexbox">
+      <div class="chat-box">
+        <div class="chat-box-header">
+          <div class="profile botprofile">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1669083824062-7fecfb4fc791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+              width="30"
+              height="30"
+              alt="Avatar"
+              class="avatar"
+            />
+            <h3 style="display: contents">Kanchi chatbot</h3>
+          </div>
+        </div>
+        <div id="chat_box_body" class="chat-box-body">
+          <div id="chat_messages">
+            <div class="profile my-profile">
+              <span>User</span>
+              <img
+                src="https://plus.unsplash.com/premium_photo-1669083824062-7fecfb4fc791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+                width="30"
+                height="30"
+                alt="Avatar"
+                class="avatar"
+              />
+            </div>
+            <div class="message my-message">{{ disp }}</div>
+            <div class="profile other-profile">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1669083824062-7fecfb4fc791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+                width="30"
+                height="30"
+                alt="Avatar"
+                class="avatar"
+              />
+              <span>Bot</span>
+            </div>
+            <div>
+              <div class="message other-message">{{ data }}</div>
+            </div>
+          </div>
+
+          <hr />
+          <form action="/form_return" method="post">
+            <div class="input-group mb-3 chat-box-footer px-3">
+              <input
+                type="text"
+                class="form-control px-2"
+                id="chat-input"
+                placeholder="send a message"
+                name="user"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <button
+                type="submit"
+                class="btn btn-outline-secondary px-3"
+                id="chat-submit button-addon2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+                  />
+                </svg>
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
