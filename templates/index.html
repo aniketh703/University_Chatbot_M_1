@@ -10,7 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Bootstrap demo</title>
+    <title>SCSVMV Chatbot</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -63,11 +63,11 @@
       }
       a {
         text-decoration: none;
-        color: black;
+        color: #46525c;
         font-size: 1rem;
       }
       a:hover {
-        color: #8cfbde;
+        color: #272727;
       }
       header {
         position: relative;
@@ -97,8 +97,8 @@
         display: none;
       }
       .action_btn {
-        background-color: #253237;
-        color: whitesmoke;
+        background-color: #eaf0f0;
+        color: black;
         padding: 0.5rem 1rem;
         border: none;
         outline: none;
@@ -110,7 +110,7 @@
       }
       .action_btn :hover {
         scale: 1.05;
-        color: #2f2f2f;
+        color: #fefefe;
       }
       .action_btn:active {
         scale: 0.95;
@@ -168,7 +168,7 @@
         /* background-color: rgb(125, 216, 255); */
         background: url(https://images.unsplash.com/photo-1679674704818-f3a500c1305b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
           no-repeat;
-          height:823.5px;
+        height: 825.2px;
         background-position: center;
         background-size: cover;
         display: flex;
@@ -196,6 +196,88 @@
         box-sizing: border-box;
         padding: 20px 15px;
         border-bottom: 1px solid #cfcfcf;
+      }
+      .button-17 {
+        align-items: center;
+        appearance: none;
+        background-color: #eaf0f0;
+        border-radius: 39px;
+        border-style: none;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+          rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+        box-sizing: border-box;
+        color: #fffcf7;
+        cursor: pointer;
+
+        display: flex;
+        fill: currentcolor;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        height: 48px;
+        justify-content: center;
+        letter-spacing: 0.25px;
+        line-height: normal;
+        max-width: 50%;
+        overflow: visible;
+        padding: 2px 24px;
+        position: relative;
+        text-align: center;
+        text-transform: none;
+        transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 15ms linear 30ms,
+          transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: auto;
+        will-change: transform, opacity;
+        z-index: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        
+      }
+
+      .button-17:hover {
+        background: #d9edff;
+        color: #5f7488;
+
+      }
+
+      .button-17:active {
+        box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+          0 8px 12px 6px rgb(60 64 67 / 15%);
+        outline: none;
+      }
+
+      .button-17:focus {
+        outline: none;
+        border: 2px solid #4285f4;
+      }
+
+      .button-17:not(:disabled) {
+        box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+          rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+      }
+
+      .button-17:not(:disabled):hover {
+        box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+          rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+      }
+
+      .button-17:not(:disabled):focus {
+        box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+          rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+      }
+
+      .button-17:not(:disabled):active {
+        box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+          rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+      }
+
+      .button-17:disabled {
+        box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+          rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
       }
       .chat-box > .chat-box-body {
         height: 100%;
@@ -356,7 +438,7 @@
         <li><a href="{{ url_for('services') }}">Services</a></li>
         <li><a href="{{ url_for('bot') }}" class="action_btn">Chatbot</a></li>
       </div>
-    </header>
+    </header> 
     <div class="flexbox">
       <div class="chat-box">
         <div class="chat-box-header">
@@ -370,6 +452,10 @@
             />
             <h3 style="display: contents">Kanchi chatbot</h3>
           </div>
+        </div>
+        <br />
+        <div class="button-17">
+          <a href="https://kanchiuniv.ac.in/" target="_blank">Visit Our College</a>
         </div>
         <div id="chat_box_body" class="chat-box-body">
           <div id="chat_messages">

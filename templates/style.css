@@ -1,13 +1,213 @@
-/* <script>
-$(document).ready(function () {
-  $(
-    ".my-profile, .my-message, .other-profile, .other-message, span"
-  ).hide();
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
 
-  $(".btn").click(function () {
-    $(
-      ".my-profile, .my-message,.other-profile, .other-message, span"
-    ).show();
-  });
-});
-</script> */
+.button-17:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+} 
+
+
+
+
+
+
+
+.chat-box > .chat-box-body {
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.chat-box > .chat-box-body #chat_messages {
+  width: 100%;
+  padding: 20px 15px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.chat-box > .chat-box-body #chat_messages .message {
+  /* width: 80%; */
+  padding: 20px 15px;
+  margin: 2px 0px;
+  overflow: hidden;
+  border-radius: 13px;
+  transition: height 0.3s ease-in-out 0s;
+}
+.chat-box > .chat-box-body #chat_messages .message.hide {
+  height: 0;
+}
+.chat-box > .chat-box-body #chat_messages .my-message {
+  color: #fff;
+  background-color: #253237;
+  align-self: flex-end;
+}
+.chat-box > .chat-box-body #chat_messages .other-message {
+  background-color: #e2e2e2;
+  width: 80%;
+}
+.chat-box > .chat-box-body #chat_messages .profile {
+  margin: 2px 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.chat-box > .chat-box-body #chat_messages .profile.hide {
+  height: 0;
+}
+.chat-box > .chat-box-body #chat_messages .profile img {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.chat-box > .chat-box-header .profile img {
+  /* display: flex; */
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.chat-box > .chat-box-header .profile {
+  display: flex;
+  align-items: center;
+}
+
+.chat-box > .chat-box-body #chat_messages .my-profile {
+  color: #afafaf;
+  align-self: flex-end;
+}
+.chat-box > .chat-box-body #chat_messages .other-profile {
+  color: #afafaf;
+}
+
+
+<div id="chat_box_body" class="chat-box-body">
+          <div id="chat_messages">
+            <div class="profile my-profile">
+              <span>User</span>
+              <img
+                src="https://plus.unsplash.com/premium_photo-1669083824062-7fecfb4fc791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+                width="30"
+                height="30"
+                alt="Avatar"
+                class="avatar"
+              />
+            </div>
+            <div class="message my-message">{{ disp }}</div>
+            <div class="profile other-profile">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1669083824062-7fecfb4fc791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+                width="30"
+                height="30"
+                alt="Avatar"
+                class="avatar"
+              />
+              <span>Bot</span>
+            </div>
+            <div>
+              <div class="message other-message">{{ data }}</div>
+            </div>
+          </div>
+
+          <hr />
+          <form action="/form_return" method="post">
+            <div class="input-group mb-3 chat-box-footer px-3">
+              <input
+                type="text"
+                class="form-control px-2"
+                id="chat-input"
+                placeholder="send a message"
+                name="user"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <button
+                type="submit"
+                class="btn btn-outline-secondary px-3"
+                id="chat-submit button-addon2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"
+                  />
+                </svg>
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
