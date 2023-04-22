@@ -372,7 +372,7 @@
                 ],
                 "responses":
                 [
-                        "You can find information about all the courses available this semester on our website at <a href=\"https://kanchiuniv.ac.in\">contact page</a>.",
+                        "You can find information about all the courses available this semester on our website at  https://kanchiuniv.ac.in/ contact page.",
                         "To fulfill the degree requirements for your major, you will need to complete [list of requirements]. You can find more information about these requirements on our website at [website address].",
                         "The grading policies for this course are [describe grading policies].",
                         "Yes, there are prerequisites for this class. You can find more information about these prerequisites on our website at <a href=\"https://kanchiuniv.ac.in\">contact page</a>.",
