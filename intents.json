@@ -364,24 +364,28 @@
                 "tag":"course, information, schedule, prerequisites, availability, degree, major, grading, materials",
                 "patterns":
                 [
-                        "What courses are available this semester?",
-                        "How do I fulfill the degree requirements for my major?",
-                        "Can you help me understand the grading policies for this course?",
-                        "Are there any prerequisites for this class?",
-                        "Where can I find the course materials?"
+                "What courses are available this semester?",
+                "How do I fulfill the degree requirements for my major?",
+                "Can you help me understand the grading policies for this course?",
+                "Are there any prerequisites for this class?",
+                "Where can I find the course materials?"
                 ],
                 "responses":
                 [
-                        "You can find information about all the courses available this semester on our website at  https://kanchiuniv.ac.in/ contact page.",
-                        "To fulfill the degree requirements for your major, you will need to complete [list of requirements]. You can find more information about these requirements on our website at [website address].",
-                        "The grading policies for this course are [describe grading policies].",
-                        "Yes, there are prerequisites for this class. You can find more information about these prerequisites on our website at <a href=\"https://kanchiuniv.ac.in\">contact page</a>.",
-                        "You can access the course materials on the learning management system. If you're having trouble finding them, please let us know."
+                "You can find information about all the courses available this semester on our website at <a href='https://kanchiuniv.ac.in/'>https://kanchiuniv.ac.in/</a> contact page.",
+                "To fulfill the degree requirements for your major, you will need to complete [list of requirements]. You can find more information about these requirements on our website at <a href='https://kanchiuniv.ac.in/'>https://kanchiuniv.ac.in/</a>.",
+                "The grading policies for this course are [describe grading policies].",
+                "Yes, there are prerequisites for this class. You can find more information about these prerequisites on our website at <a href='https://kanchiuniv.ac.in/'>https://kanchiuniv.ac.in/</a>.",
+                "You can access the course materials on the learning management system. If you're having trouble finding them, please let us know."
                 ],
                 "link":"https://kanchiuniv.ac.in/",
                 "context_text": ""
-
-        }
-                  
+        },
+        {
+                "tag": "prerequisites",
+                "patterns": ["What are the prerequisites for this class?"],
+                "responses": ["You can find more information about the prerequisites for this class on our website at <a href='https://kanchiuniv.ac.in/'>https://kanchiuniv.ac.in/</a>."],
+                "context_set": ""
+        }              
     ]
 }

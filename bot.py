@@ -43,7 +43,6 @@ def model_predict(inp):
         
 
         for intent in data["intents"]:
-            # print("11111111",intent["patterns"])
             for pattern in intent["patterns"]:
                 wrds = nltk.word_tokenize(pattern)
                 words.extend(wrds)
@@ -101,7 +100,6 @@ def model_predict(inp):
 
     with graph.as_default():
         results = model.predict(np.array([bag_of_words(inp, words)]))[0]
-        print("---------------------------------------------------------------")
         results_index = np.argmax(results)
         tag = labels[results_index]
 
