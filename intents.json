@@ -386,6 +386,57 @@
                 "patterns": ["What are the prerequisites for this class?"],
                 "responses": ["You can find more information about the prerequisites for this class on our website at <a href='https://kanchiuniv.ac.in/'>https://kanchiuniv.ac.in/</a>."],
                 "context_set": ""
-        }              
-    ]
+        },
+        {
+                "tag":"about",
+                "patterns":["About scsvmv,About the emblem,Vision,Mission"],
+                "responses": ["The Maha Swamiji of Sri Kanchi Kamakoti Peetam had cherished a desire to revive Kanchipuram to its pristine glory as a center of learning.","The motto “vande sadgurum chandrasekharam” means ‘I adore the virtuous preceptor’ guru sri chandrasekharendra saraswathi maha swamigal, by whose name the viswa mahavidyalaya is established and stands to fulfill his great vision","The university envisages a culture that is characterized by excellent faculty-student interaction and prevalence of ‘one family’ atmosphere","To provide “quality higher education coupled with Indian Value system and at the same time make it affordable to all sections of the society irrespective of their social or economic standing”.","The mission is a holistic approach to higher education with academic standards consistent with an embedded value system, enriched by a dynamic process of synergy. The Mantra is “Educational Delight” of students engaged in study and faculty engaged in teaching and research in their journey Towards Excellence with Creativity."],
+                "context_set":""
+        },
+        {
+                "tag":"His Holiness",
+                "patterns":["holiness"],
+                "responses": ["The venerated Sri Kanchi Kamakoti Peetham, established by Jagadguru Adi Sankara, who adorned it as the first Shankaracharya, has seen an unbroken lineage of Peethadhipatis."],
+                "context_set":""
+        },
+        {
+                "tag":"chancellor,CHANCELLOR",
+                "patterns":["who is the chancellor of this university","who is the chancellor of this scsvmv","scsvmv chancellor","chancellor"],
+                "responses":["Prof. Dr. S. Jayarama Reddy is the Chancellor of, Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (Deemed to be University), Kanchipuram"],
+                "context_set":""
+        },
+        {
+                "tag":"vice chancellor, VICE CHANCELLOR",
+                "patterns":["who is the vice chancellor of this university","who is the vice chancellor of this scsvmv","scsvmv vice chancellor"," vice chancellor","vc"],
+                "responses":["Prof. Dr. S.V. Raghavan,Vice Chancellor"],
+                "context_set":""
+        },
+        {
+                "tag":"Accreditations",
+                "patterns":["aicte","AICTE","All india council for technical education"],
+                "responses":["SCSVMV is approved by AICTE"],
+                "context_set":""
+        },
+        {
+                "tag":"Accreditations",
+                "patterns":["Association of indian Universities","Aiu","AIU"],
+                "responses":["SCSVMV is a member of AIU"],
+                "context_set":""
+        },
+        {
+                "tag":"Accreditations",
+                "patterns":["NAAC","NAAC grade","naac"],
+                "responses":["SCSVMV is accredited by NAAC with A grade"],
+                "context_set":""
+        },
+        {
+                "tag":"Accreditations",
+                "patterns":["UGC","University grants commission"],
+                "responses":["SCSVMV is recognised by UGC"],
+                "context_set":""
+        }
+
+
+
+]
 }
